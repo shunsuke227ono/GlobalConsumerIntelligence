@@ -14,7 +14,7 @@ data = [
     { 'name': '石井あや', 'year': 1978, 'score': 71 }
 ]
 
-# NOTE: This method is answer for assignment2.
+# NOTE: This method is the answer for the assignment2.
 def is_leap_year(year):
     if year % 400 == 0:
         return True
@@ -22,7 +22,7 @@ def is_leap_year(year):
         return False
     return year % 4 == 0
 
-# NOTE: This method is answer for assignment1.
+# NOTE: This method is the answer for the assignment1.
 def leap_years(start_year, end_year):
     leap_years = []
     for y in range(start_year, end_year + 1):
@@ -33,14 +33,14 @@ def leap_years(start_year, end_year):
 def avg(x):
     return 1.0 * sum(x) / len(x)
 
-# NOTE: This method is answer for assginment3.
+# NOTE: This method is the answer for the assginment3.
 def average(data):
     scores = []
     for datum in data:
         scores.append(datum['score'])
     return avg(scores)
 
-# NOTE: This method is answer for assginment3.
+# NOTE: This method is the answer for the assginment3.
 def average_of_leap_years(data):
     scores = []
     for datum in data:
