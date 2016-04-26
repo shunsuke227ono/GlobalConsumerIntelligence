@@ -50,7 +50,7 @@ def average_of_leap_years(data):
 
 def assignment1():
     years = leap_years(1990, 2200)
-    print "[Assinment1] Leap years between 1990 and 2200: %s" % years
+    print "[Assignment1] Leap years between 1990 and 2200: %s" % years
 
 def assignment3():
     ave = average(data)
