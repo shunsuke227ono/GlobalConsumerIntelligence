@@ -15,10 +15,19 @@ doc = Nokogiri::HTML.parse(html, nil, charset)
 taget = doc.css("#mw-content-text ul li")
 
 yoshimoto_commedians = []
-doc.css('#mw-content-text').css('ul').each do |ul|
+start = false
+doc.css('#mw-content-text').children().css('ul').each do |ul|
   ul.css('li').each do |li|
-    yoshimoto_commedians << li.css('a').inner_text
+    if li.css('a').inner_text == 'R藤本'
+      start = true
+    end
+    if start
+      yoshimoto_commedians << li.css('a').inner_text
+    end
+  end
+  if yoshimoto_commedians.last == 'ビューティーメーカー'
+    break
   end
 end
 
-p yoshimoto_commedians
+puts yoshimoto_commedians
